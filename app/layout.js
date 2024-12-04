@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import Sidebar from "./components/sidebar";
 
 const helveticaNeue = localFont({
   src: [
@@ -65,11 +66,13 @@ export default function RootLayout({ children }) {
         className={`${helveticaNeue.variable} ${roboto.className} antialiased`}
       >
         <div className="grid grid-cols-12 h-screen">
-          <div className="col-span-3 flex">
+          <div className="col-span-4 flex">
             <div className="bg-light p-8"></div>
-            <div className="bg-dark border-r border-outline flex-1"></div>
+            <div className="bg-dark border-r border-outline flex-1">
+              <Sidebar />
+            </div>
           </div>
-          <div className="col-span-9 bg-chat">{children}</div>
+          <div className="col-span-8 bg-chat">{children}</div>
         </div>
       </body>
     </html>

@@ -18,7 +18,9 @@ export default {
         primary: "#25d366",
         seen: "#53bdeb",
         color: "#8696a0",
+        icon: "#aebac1",
         input: "#2a3942",
+        hover: "#374248",
       },
       fontFamily: {
         helvetica: ["var(--font-helvetica)"],
