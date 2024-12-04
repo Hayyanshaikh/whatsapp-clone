@@ -1,15 +1,56 @@
 import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const helveticaNeue = localFont({
+  src: [
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueUltraLight.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueThin.otf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueLight.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueRoman.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueMedium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueBold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueHeavy.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "/fonts/helvetica-neue/HelveticaNeueBlack.otf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -21,9 +62,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark-gray`}
+        className={`${helveticaNeue.variable} ${roboto.className} antialiased`}
       >
-        {children}
+        <div className="grid grid-cols-12 h-screen">
+          <div className="col-span-3 flex">
+            <div className="bg-light p-8"></div>
+            <div className="bg-dark border-r border-outline flex-1"></div>
+          </div>
+          <div className="col-span-9 bg-chat">{children}</div>
+        </div>
       </body>
     </html>
   );
