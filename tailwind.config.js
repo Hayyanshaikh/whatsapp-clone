@@ -16,6 +16,7 @@ export default {
         chat: "#101a20",
         outline: "#222d34",
         primary: "#25d366",
+        primarylight: "#0a332c",
         seen: "#53bdeb",
         color: "#8696a0",
         icon: "#aebac1",

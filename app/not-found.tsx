@@ -8,15 +8,15 @@ const NotFound: React.FC = () => {
       <div className="w-full max-w-md">
         <Heading
           text="404."
-          className="md:text-8xl text-primary mb-2 font-normal font-helvetica"
+          className="md:text-8xl text-primary mb-2 !font-normal font-helvetica"
         />
         <Heading
           text="This page doesn't exist."
-          className="md:text-6xl font-normal font-helvetica"
+          className="md:text-6xl !font-normal font-helvetica"
         />
         <Button
           link="/"
-          className="bg-transparent mt-10 !rounded-full border border-outline font-helvetica hover:!bg-primary hover:!text-dark"
+          className="bg-transparent mt-10 !rounded-full !font-normal border border-outline font-helvetica hover:!bg-primary hover:!text-dark"
           size="large"
         >
           Return Home

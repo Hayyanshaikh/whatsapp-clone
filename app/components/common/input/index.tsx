@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import useInputValue from "../../hooks/useInputValue";
+import useInputValue from "../../../hooks/useInputValue";
 import { X } from "@phosphor-icons/react";
 import Button from "../button";
 

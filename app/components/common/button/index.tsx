@@ -24,7 +24,7 @@ const Button: React.FC<Props> = ({
     small: "py-1 px-2 text-sm",
   };
 
-  const baseClasses = `rounded-lg transition-all duration-75 hover:bg-hover inline-block ${sizeClasses[size]} ${className}`;
+  const baseClasses = `rounded-full transition-all duration-75 hover:bg-hover inline-block ${sizeClasses[size]} ${className}`;
 
   return link ? (
     <Link {...props} className={baseClasses} href={link}>
