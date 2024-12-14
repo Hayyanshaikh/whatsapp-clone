@@ -1,9 +1,19 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import useInputValue from "../../hooks/useInputValue";
 import { X } from "@phosphor-icons/react";
 import Button from "../button";
 
-const Input = ({
+// Props Types
+interface Props {
+  placeholder: string;
+  icon?: React.ReactNode;
+  showIcon?: boolean;
+  showClose?: boolean;
+  onValueChange: (value: string) => void;
+}
+
+const Input: React.FC<Props> = ({
   placeholder,
   icon,
   showIcon = true,

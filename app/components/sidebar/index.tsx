@@ -9,10 +9,10 @@ import {
 import Button from "../common/button";
 import Input from "../common/input";
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
   const [inputValue, setInputValue] = useState("");
 
-  const handleInputChange = (newValue) => {
+  const handleInputChange = (newValue: string) => {
     setInputValue(newValue);
   };
   return (
