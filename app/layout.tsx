@@ -70,9 +70,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${helveticaNeue.variable} ${roboto.className} antialiased`}
       >
-        <div className="grid grid-cols-1 md:grid-cols-12 h-screen">
+        <div className="flex h-screen">
           {/* Sidebar */}
-          <div className="hidden md:col-span-5 lg:col-span-4 md:flex">
+          <div className="hidden flex-[0_0_380px] lg:flex-[0_0_450px] md:flex">
             <div className="bg-light p-8"></div>
             <div className="bg-dark border-r border-outline flex-1">
               <Sidebar />
@@ -80,9 +80,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
 
           {/* Main Content */}
-          <div className="col-span-1 md:col-span-7 lg:col-span-8 bg-chat">
-            {children}
-          </div>
+          <div className="flex-1 bg-light">{children}</div>
         </div>
       </body>
     </html>

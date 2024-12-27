@@ -14,7 +14,7 @@ interface Props {
 
 const Chat: React.FC<Props> = ({ avatar, name, message, time, isOnline }) => {
   return (
-    <Link href={`/${name}`}>
+    <Link href={`/chat/${name?.replace(" ", "-")?.toLocaleLowerCase()}`}>
       <div className="flex items-start gap-4 pt-3 w-full px-5">
         <div className="relative h-[45px] aspect-square">
           <Image

@@ -4,7 +4,7 @@ import { ChatTypes } from "../../types/ChatTypes";
 
 const ChatList: React.FC<{ chats: ChatTypes[] }> = ({ chats }) => {
   return (
-    <div>
+    <div className="overflow-auto h-full">
       {chats.map((chat, index) => (
         <Chat
           key={index}
