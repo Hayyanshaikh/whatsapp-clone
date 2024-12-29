@@ -4,7 +4,7 @@ import Button from "./components/common/button";
 
 const NotFound: React.FC = () => {
   return (
-    <div className="flex items-center h-screen pl-12">
+    <div className="flex items-center bg-dark h-screen pl-12">
       <div className="w-full max-w-md">
         <Heading
           text="404."

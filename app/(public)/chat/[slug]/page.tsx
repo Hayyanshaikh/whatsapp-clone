@@ -1,11 +1,24 @@
 "use client";
 import React from "react";
 import { useParams } from "next/navigation";
+import ChatHeader from "@/app/components/ChatScreen/ChatHeader";
+import ChatBody from "@/app/components/ChatScreen/ChatBody";
+import ChatFooter from "@/app/components/ChatScreen/ChatFooter";
 
-const Messages = () => {
-  const { slug } = useParams();
+const ChatScreen = () => {
+  const { slug }: { slug: string } = useParams();
 
-  return <div>Messages: {slug}</div>;
+  return (
+    <div className="flex flex-col h-full">
+      <ChatHeader
+        isOnline={true}
+        name={slug?.replace("-", " ") || ""}
+        profileSrc="https://randomuser.me/api/portraits/men/21.jpg"
+      />
+      <ChatBody />
+      <ChatFooter />
+    </div>
+  );
 };
 
-export default Messages;
+export default ChatScreen;

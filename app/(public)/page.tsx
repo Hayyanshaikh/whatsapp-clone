@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import HomeImageSvg from "../images/HomeImage.png";
 import Sidebar from "../components/sidebar";
+import HomeImageSvg from "../images/HomeImage.png";
 
 const Home: React.FC = () => {
   return (

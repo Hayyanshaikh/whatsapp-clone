@@ -1,4 +1,5 @@
 import { ChatTypes } from "../types/ChatTypes";
+import { Option } from "../types/Option";
 
 export const chats: ChatTypes[] = [
   {
@@ -204,3 +205,10 @@ export const chats: ChatTypes[] = [
 ];
 
 export const tabs = ["Friends", "Work", "Favorite"];
+
+export const ChatMenu: Option[] = [
+  { label: "Contact Info", value: "contact-info" },
+  { label: "Close Chat", value: "close-chat" },
+  { label: "Clear Chat", value: "clear-chat" },
+  { label: "Delete Chat", value: "delete-chat" },
+];

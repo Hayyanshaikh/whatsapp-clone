@@ -70,10 +70,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${helveticaNeue.variable} ${roboto.className} antialiased`}
       >
-        <div className="flex h-screen">
+        <div className="flex h-[100dvh]">
           {/* Sidebar */}
-          <div className="hidden flex-[0_0_380px] lg:flex-[0_0_450px] md:flex">
-            <div className="bg-light p-8"></div>
+          <div className="hidden flex-[0_0_350px] lg:flex-[0_0_400px] md:flex">
+            {/* <div className="bg-light p-8"></div> */}
             <div className="bg-dark border-r border-outline flex-1">
               <Sidebar />
             </div>

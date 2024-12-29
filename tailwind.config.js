@@ -22,6 +22,8 @@ export default {
         icon: "#aebac1",
         input: "#2a3942",
         hover: "#374248",
+        menu: "#233138",
+        menuHover: "#182229",
       },
       fontFamily: {
         helvetica: ["var(--font-helvetica)"],

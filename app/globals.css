@@ -2,16 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer utilities {
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-hover) transparent;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --color-light: #202c33;
+  --color-dark: #111b21;
+  --color-chat: #101a20;
+  --color-outline: #222d34;
+  --color-primary: #25d366;
+  --color-primarylight: #0a332c;
+  --color-seen: #53bdeb;
+  --color-color: #8696a0;
+  --color-icon: #aebac1;
+  --color-input: #2a3942;
+  --color-hover: #374248;
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
